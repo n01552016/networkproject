@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Has Been Sent!</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'emailsender/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hooray!</h1>
+        <h4>The Email was sent sucessfully!</h4>
+        <button class="blue-button" onclick="window.location.href='/send_email'">Send another?</button>
+    <div>
+</body>
+</html>

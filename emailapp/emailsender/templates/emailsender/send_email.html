@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Your Email</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'emailsender/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Send Your Email</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="id_smtp_sender">Sender Email:</label>
+            {{ form.smtp_sender }}
+            <label for="id_smtp_password">SMTP Password:</label>
+            {{ form.smtp_password }}
+            <label for="id_receivers">Receiver Email:</label>
+            {{ form.receivers }}
+            <label for="id_cc">CC Email (Optional):</label>
+            {{ form.cc }}
+            <label for="id_subject">Subject:</label>
+            {{ form.subject }}
+            <label for="id_body">Body:</label>
+            {{ form.body }}
+            <label for="id_attachment">Attachment (Optional):</label>
+            {{ form.attachment }}
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'emailsender/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the email sender app</h1>
+        <p>
+            This app uses Google's SMTP server for sending emails.
+            If you have any issues with the SMTP server, please click the help button below for more information.
+        </p>
+        <button class="orange-button" onclick="window.location.href='https://support.google.com/a/answer/176600?hl=en'">Help</button>
+        <button class="blue-button" onclick="window.location.href='/send_email'">Let's Get Sending!</button>
+    </div>
+</body>
+</html>
